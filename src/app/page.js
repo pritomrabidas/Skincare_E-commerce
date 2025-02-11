@@ -1,37 +1,14 @@
-import Image from "next/image";
+"use client"
+import Benefit from "./Components/Home/Benefit";
+import HomeBanner from "./Components/Home/HomeBanner";
+import Introducing from "./Components/Home/Introducing";
 
 export default function Home() {
   return (
-    <>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-      <h1>Hello </h1>
-    </>
+    <div className="pt-20">
+      <HomeBanner />
+      <Introducing />
+      <Benefit/>
+    </div>
   );
 }

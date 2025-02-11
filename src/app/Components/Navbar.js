@@ -3,13 +3,13 @@ import { FiAlignRight } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 import { LiaSearchSolid } from "react-icons/lia";
 import { IoCartSharp } from "react-icons/io5";
-import HomeMenu from "./Navbar/HomeNav/ShopMenu";
 import { useState } from "react";
 import Link from "next/link";
 import ShopCart from "./Navbar/CartNav/ShopCart";
 import BlogMenu from "./Navbar/HomeNav/BlogMenu";
 import PageMenu from "./Navbar/HomeNav/PageMenu";
 import ContacMenu from "./Navbar/HomeNav/ContacMenu";
+import ShopMenu from "./Navbar/HomeNav/ShopMenu";
 
 const Navbar = () => {
   const [cross, setCross] = useState(true);
@@ -19,7 +19,7 @@ const Navbar = () => {
   };
   // 3
   return (
-    <nav className="bg-[#fff] text-[#212121] py-4 shadow fixed w-full z-40">
+    <nav className="bg-[#fff] text-[#212121] py-3 shadow fixed w-full z-40">
       <div className="container mx-auto font-Popins ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -32,18 +32,8 @@ const Navbar = () => {
 
             {/* Desktop Menu */}
             <div className="2xl:block xl:block lg:block md:hidden sm:hidden hidden">
-              <div className="2xl:gap-12 xl:gap-10 lg:gap-8 text-primary flex font-semibold text-base">
-                <Link
-                  href="/"
-                  className={({ isActive }) =>
-                    `hover:text-secandari relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-secandari after:bottom-0 after:left-0 hover:after:w-full after:transition-width after:duration-200 ${
-                      isActive ? "text-secandari" : ""
-                    }`
-                  }
-                >
-                  Home
-                </Link>
-                <HomeMenu />
+              <div className="2xl:gap-12 xl:gap-10 lg:gap-8 text-primary flex font-semibold text-base ">
+                <ShopMenu/>
                 <PageMenu />
                 <BlogMenu />
                 <ContacMenu />

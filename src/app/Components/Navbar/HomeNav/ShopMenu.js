@@ -23,12 +23,12 @@ const ShopMenu = () => {
     <div className="relative group w-full cursor-pointer">
       {/* Main "Home" link */}
       <Link
-        href="/"
+        href="/shop"
         className={`hover:text-secandari relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-secandari after:bottom-0 after:left-0 hover:after:w-full after:transition-width after:duration-100 ${
-          pathname === "/" ? "text-secandari" : ""
+          pathname === "/shop" ? "text-secandari" : ""
         }`}
       >
-        ShopMenu
+        Shop
       </Link>
 
       {/* Dropdown menu */}
