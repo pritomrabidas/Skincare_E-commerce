@@ -2,4 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+section{
+    overflow: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
 
+::-webkit-scrollbar {
+    width: 9px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #edf4fc;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #289c28, #289c28);
+    border: 2px solid transparent;
+  }

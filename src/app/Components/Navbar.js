@@ -21,13 +21,13 @@ const Navbar = () => {
   return (
     <nav className="bg-[#fff] text-[#212121] py-3 shadow fixed w-full z-40">
       <div className="container mx-auto font-Popins ">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className=" px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <h1 className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl sm:text-2xl text-xl font-bold text-orange-600">
+              <Link href='/' className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl sm:text-2xl text-xl font-bold text-orange-600 cursor-pointer">
                 SkinCare
-              </h1>
+              </Link>
             </div>
 
             {/* Desktop Menu */}
