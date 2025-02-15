@@ -78,9 +78,9 @@ const Product = () => {
                 </h3>
 
                 {/* Star Rating Section */}
-                <p className=" justify-center flex">
+                <span className=" justify-center flex">
                   {renderStars(pro.rating)}
-                </p>
+                </span>
                 <p className="text-lg text-primary font-NunitoFont font-medium py-1.5">
                   {pro.price}
                 </p>

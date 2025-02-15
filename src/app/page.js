@@ -1,5 +1,6 @@
 "use client"
 import Benefit from "./Components/Home/Benefit";
+import Connected from "./Components/Home/Connected";
 import FeatureSection from "./Components/Home/FeatureSection";
 import HomeBanner from "./Components/Home/HomeBanner";
 import Introducing from "./Components/Home/Introducing";
@@ -14,7 +15,8 @@ export default function Home() {
       <Benefit />
       <SpecialFormula />
       <FeatureSection />
-      <Product/>
+      <Product />
+      <Connected/>
     </div>
   );
 }
