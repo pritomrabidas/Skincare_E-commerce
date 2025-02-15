@@ -1,63 +1,97 @@
 import Image from "next/image";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Link from "next/link";
+import { Star } from "lucide-react"; // Import Star icon from Lucide
+
 const Product = () => {
   const products = [
     {
       id: 75,
-      name: "Medicated Acne Masque",
-      image:
-        "https://demo2.wpopal.com/smartic/wp-content/uploads/2020/09/01_product_3-500x600.jpg",
+      name: "home-4",
+      image: "/home-6.jpg",
+      head: "Clear Cell mattifying moisturizer for oily skin",
       price: "$118.10",
-      link: "https://demo2.wpopal.com/smartic/product/medicated-acne-masque/",
+      link: "home",
+      rating: 5,
     },
     {
       id: 85,
-      name: "Clear Cell Mattifying Moisturizer",
-      image:
-        "https://demo2.wpopal.com/smartic/wp-content/uploads/2020/09/01_product_1-500x600.jpg",
+      name: "home-4",
+      image: "/home-6.jpg",
+      head: "Medicated acne masque",
       price: "$199.99",
-      link: "https://demo2.wpopal.com/smartic/product/clear-cell-mattifying-moisturizer-for-oily-skin/",
+      link: "home",
+      rating: 4,
     },
     {
       id: 76,
-      name: "Intense Brightening Exfoliating Powder",
-      image:
-        "https://demo2.wpopal.com/smartic/wp-content/uploads/2020/09/01_product_2-500x600.jpg",
+      name: "home-4",
+      image: "/home-6.jpg",
+      head: "Intense brightening exfoliating powder",
       price: "$74.52 - $903.20",
-      link: "https://demo2.wpopal.com/smartic/product/intense-brightening-exfoliating-powder/",
+      link: "home",
+      rating: 4.5,
     },
   ];
-  return (
-    <section className="w-full max-w-4xl mx-auto p-4 bg-white rounded-xl shadow-lg text-center">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">
-        Our Best Sellers
-      </h2>
-      <Carousel
-        showArrows={true}
-        infiniteLoop={true}
-        autoPlay={true}
-        interval={5000}
-        showThumbs={false}
-      >
-        {products.map((product) => (
-          <div key={product.id} className="text-center p-4">
-            <Image
-              src={product.image}
-              alt={product.name}
-              className="mx-auto rounded-lg"
-            />
-            <h3 className="text-lg font-semibold mt-2">{product.name}</h3>
-            <p className="text-gray-600">{product.price}</p>
-            <a
-              href={product.link}
-              className="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-            >
-              View Product
-            </a>
-          </div>
+
+  // Function to generate star icons based on rating
+  const renderStars = (rating) => {
+    const fullStars = Math.floor(rating); // Get full stars
+    const hasHalfStar = rating % 1 !== 0; // Check if half star needed
+
+    return (
+      <div className="flex space-x-1">
+        {[...Array(fullStars)].map((_, i) => (
+          <Star key={i} size={18} className="text-yellow-400 fill-yellow-400" />
         ))}
-      </Carousel>
+        {hasHalfStar && (
+          <Star
+            size={18}
+            className="text-yellow-400 fill-yellow-400 opacity-50"
+          />
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <section className="py-16 bg-white">
+      <div className="container mx-auto text-center px-2">
+        <h3 className="text-lg text-secandari font-medium font-Popins">
+          Order Now.
+        </h3>
+        <h2 className="text-3xl text-primary font-Raleway font-bold py-2">
+          Our Best Sellers
+        </h2>
+        <div className="grid grid-cols-3 gap-9 w-full justify-center pt-16 rounded-xl">
+          {products.map((pro) => (
+            <div key={pro.id} className="flex flex-col items-center">
+              <Link href={pro.link} className="">
+                <Image
+                  src={pro.image}
+                  alt={pro.name}
+                  width={200}
+                  height={200}
+                  className="rounded-lg w-[400px] h-[430px] object-cover relative"
+                />
+                <h3 className="text-base text-primary font-normal font-Popins py-2">
+                  {pro.head}
+                </h3>
+
+                {/* Star Rating Section */}
+                <p className=" justify-center flex">
+                  {renderStars(pro.rating)}
+                </p>
+                <p className="text-lg text-primary font-NunitoFont font-medium py-1.5">
+                  {pro.price}
+                </p>
+                <button className="text-sm text-white font-Monrope font-normal py-3 px-7 bg-secandari duration-300 hover:bg-[#297929] rounded-md">
+                  Select Options
+                </button>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
