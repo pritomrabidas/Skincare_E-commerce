@@ -23,18 +23,18 @@ const Benefit = () => {
   return (
     <section>
       <div className="container mx-auto px-10 py-16">
-        <div className="flex gap-0 justify-center items-center m-auto">
+        <div className="flex md:flex-row flex-col xl:gap-14 lg:gap-10 gap-10 justify-center items-center m-auto">
           {/* Left Column */}
-          <div className="w-[50%] hidden md:block">
+          <div className="xl:w-[40%] md:w-[45%] sm:w-[60%] w-[87%]">
             <Image
-              className="rounded-2xl h-[550px]"
+              className="rounded-2xl h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] w-full"
               src="/home-6.jpg"
               alt="home-6"
               width={500}
               height={500}
             />
           </div>
-          <div className="w-[50%]">
+          <div className="xl:w-[50%] md:w-[55%] w-full md:text-start sm:text-center">
             <div className="space-y-4">
               <h2 className="text-lg text-secandari font-medium font-Popins">
                 Product Benefits
@@ -44,7 +44,7 @@ const Benefit = () => {
                 Protect and Repair
               </h2>
 
-              <p className="text-brand text-sm font-normal font-NunitoFont w-[90%]">
+              <p className="text-brand text-sm font-normal font-NunitoFont w-full sm:w-[90%]">
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
                 dolor in reprehenderit in voluptate velit.
@@ -53,7 +53,7 @@ const Benefit = () => {
               {/* Benefits List (Right to Left Animation) */}
             </div>
             {benefits.map((stat, index) => (
-              <div key={index} className="grid grid-cols-2 pt-5 w-full">
+              <div key={index} className=" pt-5 w-full">
                 <div className="flex items-center gap-5">
                   <span className="text-secandari text-4xl">{stat.icon}</span>
                   <p className=" text-primary text-base font-NunitoFont font-normal">

@@ -14,12 +14,12 @@ const Connected = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const portfolioItems = [
-    { id: 1, image: "/home-6.jpg" },
-    { id: 2, image: "/home-4.jpg" },
-    { id: 3, image: "/home-6.jpg" },
-    { id: 4, image: "/home-4.jpg" },
-    { id: 5, image: "/home-6.jpg" },
-    { id: 6, image: "/home-4.jpg" },
+    { id: 1, image: "/home-12.webp" },
+    { id: 2, image: "/home-13.webp" },
+    { id: 3, image: "/home-14.webp" },
+    { id: 4, image: "/home-15.webp" },
+    { id: 5, image: "/home-16.webp" },
+    { id: 6, image: "/home-17.webp" },
   ];
 
   const openModal = (index) => {
@@ -44,7 +44,7 @@ const Connected = () => {
   };
 
   return (
-    <section className="relative pt-24 pb-16 bg-[#fef9fc]">
+    <section className="relative py-20 bg-[#fdecf7]">
       <div className="container mx-auto px-4">
         <h3 className="text-lg text-secandari font-medium font-Popins text-center">
           Our Photos.
@@ -66,7 +66,7 @@ const Connected = () => {
                 width={100}
                 className="w-full h-[200px] object-cover"
               />
-              <div className="absolute inset-0 bg-[rgba(0,0,0,0.28)] bg-opacity-50 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center transition-all duration-300">
+              <div className="absolute inset-0 bg-[rgba(0,0,0,0.31)] bg-opacity-50 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center transition-all duration-300">
                 <button
                   onClick={() => openModal(index)}
                   className="text-white text-xl"

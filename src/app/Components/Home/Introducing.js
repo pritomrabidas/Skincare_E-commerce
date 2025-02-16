@@ -6,11 +6,11 @@ import Image from "next/image";
 const Introducing = () => {
   return (
     <section className="w-full bg-white px-4 py-8">
-      <div className="container mx-auto flex gap-16 items-center m-auto">
+      <div className="container mx-auto flex md:flex-row flex-col xl:gap-16 lg:gap-10 md:gap-9 items-center m-auto">
         {/* Left Column - Hidden on Mobile */}
         <div className="w-[40%] hidden md:block scale-95 shadow-md">
           <Image
-            className="h-[400px] rounded-2xl"
+            className="lg:h-[400px] md:h-[320px] rounded-2xl"
             src={"/Introducing.webp"}
             alt="Introducing.webp"
             width={500}
@@ -19,14 +19,14 @@ const Introducing = () => {
         </div>
 
         {/* Right Column */}
-        <div className="w-full md:w-[60%] flex flex-col items-start space-y-4">
+        <div className="w-full md:w-[60%] flex flex-col items-center md:items-start space-y-4">
           <p className="text-lg text-secandari font-medium font-Popins">
             Introducing.
           </p>
-          <h2 className="text-3xl text-primary font-Raleway font-bold">
+          <h2 className=" text-2xl lg:text-3xl text-primary font-Raleway font-bold">
             Discover the Miracle
           </h2>
-          <p className="text-brand text-sm font-normal font-NunitoFont w-[90%]">
+          <p className="text-brand text-sm font-normal font-NunitoFont lg:w-[90%] md:w-full sm:w-[90%] w-full text-center md:text-start">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -41,7 +41,7 @@ const Introducing = () => {
               { value: 83, label: "Wrinkle Decrease" },
             ].map((stat, index) => (
               <div key={index} className="w-1/3 text-center py-2">
-                <p className="text-4xl font-semibold text-secandari font-Monrope border-t-[3px] pt-2 border-brand hover:border-secandari duration-200">
+                <p className="lg:text-4xl text-3xl font-semibold text-secandari font-Monrope border-t-2 lg:border-t-[3px] pt-2 border-brand hover:border-secandari duration-200">
                   <CounterUp target={stat.value} duration={2000} />%
                 </p>
                 <p className="text-sm text-brand font-normal font-Opensans pt-1">

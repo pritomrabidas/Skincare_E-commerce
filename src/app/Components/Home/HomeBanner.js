@@ -4,15 +4,15 @@ import Link from "next/link";
 
 const HomeBanner = () => {
   return (
-    <section className="relative w-full h-[584px] bg-transparent flex items-center justify-center">
+    <section className="relative w-full py-20 bg-transparent flex items-center justify-center">
       <div className="relative w-full max-w-7xl px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
-          <div className="space-y-4 text-left">
+          <div className="space-y-4 text-center md:text-left pb-5">
             <p className="text-secandari font-medium text-lg font-Popins">
               Skin Care Product
             </p>
-            <h1 className="text-4xl md:text-5xl font-semibold text-primary font-Raleway leading-tight py-1">
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-semibold text-primary font-Raleway leading-tight py-1 md:w-full sm:w-[70%] w-[90%] mx-auto md:mx-0">
               Highly Effective Solution for Your Skin
             </h1>
             <Link
@@ -26,9 +26,9 @@ const HomeBanner = () => {
           </div>
 
           {/* Right Image */}
-          <div className="relative">
+          <div className="relative justify-center flex">
             <Image
-              className="rounded-3xl w-[500px] h-[350px]"
+              className="rounded-3xl w-[400px] lg:w-[500px] h-[300px] lg:h-[350px]"
               src="/Homebanner.webp"
               alt="Skincare"
               width={500}

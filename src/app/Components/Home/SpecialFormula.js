@@ -68,25 +68,25 @@ const SpecialFormula = () => {
           <h2 className="text-3xl text-primary font-Raleway font-bold py-2">
             The Special Formula
           </h2>
-          <p className="text-brand text-center justify-center mx-auto flex text-sm font-normal font-NunitoFont w-[40%]">
+          <p className="text-brand text-center justify-center mx-auto flex text-sm font-normal font-NunitoFont w-full sm:w-[70%] md:w-[60%] lg:w-[40%]">
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
             officia deserunt mollit anim id est laborum.
           </p>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center pt-12">
-          <div className=" w-1/2 flex justify-center">
+          <div className=" md:w-1/2 w-full flex justify-center pb-9">
             <Image
               src="/home-6.jpg"
               alt="Decoration"
               width={423}
               height={309}
-              className="h-[400px] w-[65%] rounded-2xl shadow-md"
+              className="xl:h-[400px] lg:h-[380px] md:h-[350px] sm:h-[380px] h-[350px] xl:w-[65%] lg:w-[75%] md:w-[85%] sm:w-[65%] w-[80%] rounded-2xl shadow-md "
             />
           </div>
           <div className="w-full md:w-1/2 justify-center items-center flex">
             <Slider
               {...settings}
-              className="text-center flex w-[70%] rounded-lg shadow-sm"
+              className="text-center flex xl:w-[70%] lg:w-[80%] md:w-[85%] sm:w-[80%] w-[95%]  rounded-lg shadow-sm"
             >
               {ingredients.map((item, index) => (
                 <div
