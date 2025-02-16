@@ -62,18 +62,18 @@ const Product = () => {
         <h2 className="text-3xl text-primary font-Raleway font-bold py-2">
           Our Best Sellers
         </h2>
-        <div className="grid grid-cols-3 gap-9 w-full justify-center pt-16 rounded-xl">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-9 w-full justify-center pt-16 rounded-xl">
           {products.map((pro) => (
             <div key={pro.id} className="flex flex-col items-center">
-              <Link href={pro.link} className="">
+              <Link href={pro.link} className="mx-auto justify-center">
                 <Image
                   src={pro.image}
                   alt={pro.name}
                   width={200}
                   height={200}
-                  className="rounded-lg w-[400px] h-[430px] object-cover relative"
+                  className="rounded-lg w-[250px] sm:w-[230px] md:w-[250px] lg:w-[400px] lg:h-[430px] md:h-[340px] sm:h-[270px] h-[310px]  mx-auto object-cover relative"
                 />
-                <h3 className="text-base text-primary font-normal font-Popins py-2">
+                <h3 className="text-base text-primary font-normal font-Popins py-2 w-[80%] sm:w-[95%] md:w-[90%] text-center mx-auto">
                   {pro.head}
                 </h3>
 

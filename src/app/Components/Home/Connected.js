@@ -53,7 +53,7 @@ const Connected = () => {
           Stay Connected
         </h2>
         {/* Portfolio Grid */}
-        <div className="grid md:grid-cols-6 gap-3 pt-10">
+        <div className="grid md:grid-cols-6 sm:grid-cols-3 grid-cols-2 gap-3 pt-10">
           {portfolioItems.map((item, index) => (
             <div
               key={item.id}
