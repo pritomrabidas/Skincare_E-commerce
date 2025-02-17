@@ -6,27 +6,24 @@ const PageMenu = () => {
   const pathname = usePathname();
 
   const menuItems = [
-    { label: "About-1", path: "/shop-fullwidth" },
-    { label: "About-2", path: "/shop-sidebar" },
-    { label: "About-3", path: "/shop-listview" },
-    { label: "About-4", path: "/vertical-thumbnail" },
-    { label: "About-5", path: "/horizontal-thumbnail" },
-    { label: "FAQ", path: "/sticky-detail" },
-    { label: "404", path: "gallery-thumbnail" },
-    { label: "Icons", path: "/video-upload" },
+    { label: "About 1", path:"/about1"},
+    { label: "About 2", path: "/about2" },
+    { label: "About 3", path: "/about3" },
+    { label: "About 4", path: "/about4" },
+    { label: "About 5", path: "/about5" },
+    { label: "FAQ", path: "/faq" },
+    { label: "404", path: "/404" },
+    { label: "Icons", path: "/icons" },
   ];
 
   return (
     <div className="relative group w-full cursor-pointer">
       {/* Main "Home" link */}
-      <Link
-        href="/"
-        className={`hover:text-secandari relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-secandari after:bottom-0 after:left-0 hover:after:w-full after:transition-width after:duration-100 ${
-          pathname === "/pages" ? "text-secandari" : ""
-        }`}
+      <li
+        className="hover:text-secandari relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-secandari after:bottom-0 after:left-0 hover:after:w-full after:transition-width after:duration-100 list-none"
       >
         Pages
-      </Link>
+      </li>
 
       {/* Dropdown menu */}
       <div className="absolute -left-10 hidden w-56 bg-white shadow-sm group-hover:block">
