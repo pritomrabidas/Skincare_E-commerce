@@ -10,10 +10,8 @@ const PageMenu = () => {
     { label: "About 2", path: "/about2" },
     { label: "About 3", path: "/about3" },
     { label: "About 4", path: "/about4" },
-    { label: "About 5", path: "/about5" },
     { label: "FAQ", path: "/faq" },
     { label: "404", path: "/404" },
-    { label: "Icons", path: "/icons" },
   ];
 
   return (
