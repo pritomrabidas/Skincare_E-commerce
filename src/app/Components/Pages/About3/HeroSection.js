@@ -3,9 +3,9 @@ const HeroSection = () => {
   return (
     <section className="relative w-full mx-auto px-4 py-20  items-center">
       <div className="container mx-auto ">
-        <div className="px-20 pb-20 flex flex-wrap">
+        <div className="xl:px-20 px-4 pb-20 flex flex-wrap">
           <div className="w-full md:w-1/2">
-            <h2 className="text-5xl font-bold text-primary font-Montserrat">
+            <h2 className="lg:text-5xl sm:text-4xl text-3xl font-bold text-primary font-Montserrat">
               We convert <br></br> your idea into a <br></br>reality
             </h2>
           </div>
@@ -23,10 +23,10 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
-          <div
-            className="w-full h-[550px] bg-cover bg-no-repeat bg-center rounded-md"
-            style={{ backgroundImage: "url('/about3/about-2.jpg')" }}
-          ></div>
+        <div
+          className="w-full lg:h-[550px] h-[400px] bg-cover bg-no-repeat bg-center rounded-md"
+          style={{ backgroundImage: "url('/about3/about-2.jpg')" }}
+        ></div>
       </div>
     </section>
   );

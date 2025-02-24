@@ -41,15 +41,17 @@ const BestTeam = () => {
     autoplaySpeed: 5000,
     dots: false,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2, dots: true } },
+      { breakpoint: 1024, settings: { slidesToShow: 1,} },
+      { breakpoint: 1023, settings: { slidesToShow: 3,} },
+      { breakpoint: 768, settings: { slidesToShow: 2,} },
       { breakpoint: 639, settings: { slidesToShow: 1 } },
     ],
   };
   return (
     <section className="py-16">
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 pb-10 px-4">
-          <h3 className="text-5xl font-bold text-primary font-Montserrat">
+        <div className="grid md:grid-cols-2 grid-cols-1 pb-10 px-4">
+          <h3 className="lg:text-5xl md:text-4xl text-3xl font-bold text-primary font-Montserrat pb-2.5">
             The best team <br></br> available
           </h3>
           <p className="text-gray-700 text-base font-normal font-NunitoFont mb-4 w-[90%]">

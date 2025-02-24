@@ -45,7 +45,7 @@ const FAQSection = () => {
         {faqs.map((faq, index) => (
           <div key={index} className="border-b border-gray-300">
             <button
-              className="w-full text-left flex justify-between items-center py-4 font-medium font-Popins text-gray-800"
+              className="w-full text-left flex justify-between items-center py-4 text-sm sm:text-base font-medium font-Popins text-gray-800"
               onClick={() => toggleAccordion(index)}
             >
               {faq.question}

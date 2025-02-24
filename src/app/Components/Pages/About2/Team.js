@@ -42,18 +42,20 @@ const Team = () => {
     autoplaySpeed: 5000,
     dots: false,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2, dots: true } },
+      { breakpoint: 1024, settings: { slidesToShow: 1,} },
+      { breakpoint: 1023, settings: { slidesToShow: 3,} },
+      { breakpoint: 768, settings: { slidesToShow: 2,} },
       { breakpoint: 639, settings: { slidesToShow: 1 } },
     ],
   };
   return (
     <section className="bg-slate-50 py-16 2xl:px-10 xl:px-2 lg:px-20 md:px-6">
-      <div className="container mx-auto w-full px-10">
+      <div className="container mx-auto w-full px-10 justify-center">
         <div className="text-center pb-10">
-          <p className="text-lg mt-4 w-1/2 text-primary font-NunitoFont font-normal  mx-auto">
+          <p className="text-lg mt-4 sm:w-1/2 w-full text-primary font-NunitoFont font-normal  mx-auto">
             Quisque tellus risus, adipisci
           </p>
-          <h3 className="text-5xl font-bold font-Raleway text-primary">
+          <h3 className="md:text-5xl text-3xl font-bold font-Raleway text-primary">
             Meet Our Experts
           </h3>
         </div>

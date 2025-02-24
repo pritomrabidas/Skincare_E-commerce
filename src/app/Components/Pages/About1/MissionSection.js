@@ -2,7 +2,7 @@ const MissionSection = () => {
   return (
     <section className=" mx-auto px-6 py-10">
       <div className=" container mx-auto ">
-        <div className="flex flex-wrap w-[950px] justify-center items-center mx-auto">
+        <div className="flex flex-wrap justify-center items-center mx-auto">
           {/* Left Column */}
           <div className="w-full md:w-1/2 px-4 mb-6 md:mb-0">
             <h2 className="text-2xl font-bold text-primary font-Raleway mb-4">

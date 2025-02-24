@@ -25,12 +25,12 @@ const WhatWeDo = () => {
   return (
     <section className="py-20">
       <div className="container mx-auto">
-        <h2 className="text-5xl font-bold font-Raleway text-center mb-6">
+        <h2 className="md:text-5xl text-4xl font-bold font-Raleway text-center mb-6">
           What we do
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pt-10">
           {services.map((service) => (
-            <div key={service.number} className="flex flex-col items-center">
+            <div key={service.number} className="flex flex-col items-center pb-3">
               <div className="flex gap-2 items-center justify-center pb-2">
                 <p className="text-gray-500 font-Popins text-lg font-medium ">
                   {service.number}

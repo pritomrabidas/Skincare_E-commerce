@@ -7,7 +7,7 @@ export default function Breadcrumb({ heading, bread }) {
       style={{ backgroundImage: "url('about3/about-1.webp')" }}
     >
       <div className="w-full">
-        <div className="text-5xl font-semibold text-white font-Montserrat">
+        <div className="md:text-5xl text-4xl font-semibold text-white font-Montserrat">
           {heading}
         </div>
         <div className="flex items-center space-x-2 text-brand text-sm pt-2">

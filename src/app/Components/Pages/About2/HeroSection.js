@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12 py-16">
         <div className="md:w-1/2 animate-fade-right">
           <div className="">
-            <h2 className="text-5xl font-bold text-primary font-Raleway mb-4">
+            <h2 className="lg:text-5xl text-4xl font-bold text-primary font-Raleway mb-4">
               Innovation and <br /> Simplicity
             </h2>
             <p className="text-base text-[#4b4d4f] font-medium font-NunitoFont mb-4">
@@ -21,7 +21,7 @@ const HeroSection = () => {
             </p>
             <Link
               href="/about2"
-              className="bg-secandari text-primary px-6 py-4 rounded-md text-sm font-Popins font-medium "
+              className="bg-secandari text-primary md:px-6 px-5 py-3 lg:py-4 rounded-md text-sm font-Popins font-medium "
             >
               Get Started Now
             </Link>

@@ -7,10 +7,10 @@ const AboutSection = () => {
         <div className="w-full justify-center mx-auto">
           {/* Heading */}
           <div className="w-full justify-center mx-auto text-center pb-14">
-            <h3 className="text-5xl font-bold font-Raleway text-primary">
+            <h3 className=" lg:text-5xl md:text-4xl text-3xl font-bold font-Raleway text-primary">
               Who We Are
             </h3>
-            <p className="text-lg mt-4 w-1/2 text-primary font-NunitoFont font-normal  mx-auto">
+            <p className="text-lg mt-4 w-full sm:w-[80%] md:w-[75%] lg:w-1/2 text-primary font-NunitoFont font-normal  mx-auto">
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
@@ -19,7 +19,7 @@ const AboutSection = () => {
           {/* Images Section */}
           <div className="w-full  flex flex-col lg:flex-row gap-6">
             {/* Image 1 */}
-            <div className="w-1/4 relative">
+            <div className="lg:w-1/4 w-full relative">
               <Image
                 src="/about1/about-2.webp"
                 alt="home-10"
@@ -32,7 +32,7 @@ const AboutSection = () => {
             </div>
 
             {/* Image 2 */}
-            <div className="w-3/4 relative">
+            <div className="lg:w-3/4 w-full relative">
               <Image
                 src="/about1/about-1.webp"
                 alt="home-10"

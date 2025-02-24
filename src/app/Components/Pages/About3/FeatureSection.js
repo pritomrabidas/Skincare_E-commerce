@@ -25,7 +25,7 @@ const FeatureSection = () => {
   ];
   return (
     <section className=" bg-gray-100 py-20">
-      <div className="container mx-auto flex flex-wrap gap-6 justify-center">
+      <div className="container mx-auto flex flex-wrap gap-6 justify-center px-4">
         {features.map((feature, index) => (
           <div
             key={index}

@@ -36,7 +36,7 @@ const OurStory = () => {
               laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
               dolor in reprehenderit in voluptate velit.”
             </blockquote>
-            <p className="text-primary text-3xl font-medium font-Montez italic pt-12">
+            <p className="text-primary text-3xl font-medium font-Montez italic pt-4 md:pt-12">
               pritom
             </p>
             <p className="text-gray-900 font-semibold pt-2 ">
@@ -45,7 +45,7 @@ const OurStory = () => {
           </div>
         </div>
         <div className="w-full  flex flex-col lg:flex-row gap-6 pt-20">
-          <div className="w-3/4 relative">
+          <div className="lg:w-3/4 w-full relative">
             <Image
               src="/about1/about-4.jpg"
               alt="home-10"
@@ -56,7 +56,7 @@ const OurStory = () => {
             />
             <div className="absolute inset-0 bg-[rgba(0,0,0,0.16)]"></div>
           </div>
-          <div className="w-1/4 relative">
+          <div className="lg:w-1/4 w-full relative">
             <Image
               src="/about1/about-3.jpg"
               alt="home-10"
