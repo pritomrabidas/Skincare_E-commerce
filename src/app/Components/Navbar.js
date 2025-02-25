@@ -10,10 +10,11 @@ import BlogMenu from "./Navbar/HomeNav/BlogMenu";
 import PageMenu from "./Navbar/HomeNav/PageMenu";
 import ContacMenu from "./Navbar/HomeNav/ContacMenu";
 import ShopMenu from "./Navbar/HomeNav/ShopMenu";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [cross, setCross] = useState(true);
-
+  const pathname = usePathname();
   const HandleClick = () => {
     setCross(false);
   };
@@ -25,7 +26,10 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <Link href='/' className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl sm:text-2xl text-xl font-bold text-orange-600 cursor-pointer">
+              <Link
+                href="/"
+                className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl sm:text-2xl text-xl font-bold text-orange-600 cursor-pointer"
+              >
                 SkinCare
               </Link>
             </div>
@@ -33,10 +37,17 @@ const Navbar = () => {
             {/* Desktop Menu */}
             <div className="2xl:block xl:block lg:block md:hidden sm:hidden hidden">
               <div className="2xl:gap-12 xl:gap-10 lg:gap-8 text-primary flex font-semibold text-base ">
-                <ShopMenu/>
+                <ShopMenu />
                 <PageMenu />
                 <BlogMenu />
-                <ContacMenu />
+                <Link
+                  href="/contact"
+                  className={`hover:text-secandari relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-secandari after:bottom-0 after:left-0 hover:after:w-full after:transition-width after:duration-100 ${
+                    pathname === "/contact" ? "text-secandari" : ""
+                  }`}
+                >
+                  Contact
+                </Link>
               </div>
             </div>
 
