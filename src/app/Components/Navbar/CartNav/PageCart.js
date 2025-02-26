@@ -1,32 +1,29 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
-const ShopCart = () => {
+
+const PageCart = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-
   const menuItems = [
-    { label: "Shop-Fullwidth", path: "/shop-fullwidth" },
-    { label: "Shop-Sidebar", path: "/shop-sidebar" },
-    { label: "Shop-Listview ", path: "/shop-listview" },
-    { label: "Vertical-Thumbnail", path: "/vertical-thumbnail" },
-    { label: "Horizontal-Thumbnail", path: "/horizontal-thumbnail" },
-    { label: "Sticky-Detail", path: "/sticky-detail" },
-    { label: "Gallery-Thumbnail", path: "gallery-thumbnail" },
-    { label: "Video-Upolad", path: "/video-upload" },
-    { label: "360 Viewer", path: "/landing" },
+    { label: "About 1", path: "/about1" },
+    { label: "About 2", path: "/about2" },
+    { label: "About 3", path: "/about3" },
+    { label: "About 4", path: "/about4" },
+    { label: "FAQ", path: "/faq" },
+    { label: "404", path: "/404" },
   ];
   return (
     <div>
-      <div className="flex items-center gap-32 pb-3">
+      <div className="flex items-center gap-[120px] pb-3">
         <Link
-          href="/shop"
+          href="/about1"
           className="hover:text-secandari text-xl font-medium font-Raleway"
         >
-          Shop
+          Pages
         </Link>
-        <div onClick={toggleMenu} className="cursor-pointer ">
+        <div onClick={toggleMenu} className="cursor-pointer justify-end">
           {isOpen ? (
             <CiCircleMinus className="text-2xl text-secandari" />
           ) : (
@@ -52,4 +49,4 @@ const ShopCart = () => {
   );
 };
 
-export default ShopCart;
+export default PageCart;

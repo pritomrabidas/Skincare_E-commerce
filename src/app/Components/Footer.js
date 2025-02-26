@@ -3,10 +3,10 @@ import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className=" text-black py-10">
+    <footer className=" text-black pt-10 pb-3">
       <div className="container mx-auto px-4 ">
         {/* Logo & Address */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div>
             <Link
               className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl

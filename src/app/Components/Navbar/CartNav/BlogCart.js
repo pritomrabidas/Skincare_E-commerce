@@ -1,32 +1,27 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
-const ShopCart = () => {
+const BlogCart = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-
   const menuItems = [
-    { label: "Shop-Fullwidth", path: "/shop-fullwidth" },
-    { label: "Shop-Sidebar", path: "/shop-sidebar" },
-    { label: "Shop-Listview ", path: "/shop-listview" },
-    { label: "Vertical-Thumbnail", path: "/vertical-thumbnail" },
-    { label: "Horizontal-Thumbnail", path: "/horizontal-thumbnail" },
-    { label: "Sticky-Detail", path: "/sticky-detail" },
-    { label: "Gallery-Thumbnail", path: "gallery-thumbnail" },
-    { label: "Video-Upolad", path: "/video-upload" },
-    { label: "360 Viewer", path: "/landing" },
+    { label: "Blog-Standard", path: "/blog-standard" },
+    { label: "Blog-Gridview", path: "/blog-gridview" },
+    { label: "Blog-Listview", path: "/blog-listview" },
+    { label: "SinglePost", path: "/singlePostl" },
   ];
+ 
   return (
     <div>
-      <div className="flex items-center gap-32 pb-3">
+      <div className="flex items-center gap-[133px] pb-3">
         <Link
-          href="/shop"
+          href="/blog"
           className="hover:text-secandari text-xl font-medium font-Raleway"
         >
-          Shop
+          Blog
         </Link>
-        <div onClick={toggleMenu} className="cursor-pointer ">
+        <div onClick={toggleMenu} className="cursor-pointer justify-end">
           {isOpen ? (
             <CiCircleMinus className="text-2xl text-secandari" />
           ) : (
@@ -52,4 +47,4 @@ const ShopCart = () => {
   );
 };
 
-export default ShopCart;
+export default BlogCart;

@@ -9,8 +9,8 @@ const HelpSection = () => {
           <h3 className="md:text-5xl sm:text-4xl text-2xl font-bold text-white font-Popins">
             We are here to help
           </h3>
-          <p className="mt-4 text-gray-100 text-sm sm:text-base font-normal font-Opensans">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br/> sed do
+          <p className="mt-4 text-gray-100 text-sm sm:text-base font-normal font-Opensans w-full sm:w-[480px] md:w-[500px] text-center mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt
           </p>
         </div>

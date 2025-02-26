@@ -6,7 +6,7 @@ const ContactSection1 = () => {
       <div className=" container mx-auto px-6 flex flex-wrap justify-center items-center">
         {/* Left Column: Contact Form */}
         <div className="w-full md:w-1/2 px-4">
-          <h2 className="text-3xl font-bold text-primary font-NunitoFont">
+          <h2 className="sm:text-3xl text-2xl font-bold text-primary font-NunitoFont">
             Send us a message
           </h2>
           <p className="mt-4 text-gray-600 text-sm font-Opensans font-normal">
@@ -43,7 +43,7 @@ const ContactSection1 = () => {
         {/* Right Column: Contact Info */}
         <div className="w-full md:w-1/2 px-4 flex flex-col space-y-6 mt-8 md:mt-0">
           <div
-            className="sm:h-[400px] h-[350px] bg-cover bg-no-repeat bg-center rounded-md w-[90%]"
+            className="sm:h-[400px] h-[350px] bg-cover bg-no-repeat bg-center rounded-md w-[95%] sm:w-[90%] justify-center flex mx-auto"
             style={{ backgroundImage: "url('contact1.jpg')" }}
           ></div>
         </div>

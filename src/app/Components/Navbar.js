@@ -11,6 +11,8 @@ import PageMenu from "./Navbar/HomeNav/PageMenu";
 import ContacMenu from "./Navbar/HomeNav/ContacMenu";
 import ShopMenu from "./Navbar/HomeNav/ShopMenu";
 import { usePathname } from "next/navigation";
+import PageCart from "./Navbar/CartNav/PageCart";
+import BlogCart from "./Navbar/CartNav/BlogCart";
 
 const Navbar = () => {
   const [cross, setCross] = useState(true);
@@ -64,7 +66,7 @@ const Navbar = () => {
                   {cross ? (
                     <FiAlignRight
                       onClick={HandleClick}
-                      className="hover:text-secandari transition-all duration-500"
+                      className="hover:text-secandari transition-all duration-500 cursor-pointer"
                     />
                   ) : (
                     <div className="absolute w-full top-0 left-0 bg-[rgba(0,0,0,0.1)] flex transition-all duration-500 h-screen">
@@ -72,20 +74,28 @@ const Navbar = () => {
                         onClick={() => setCross(true)}
                         className="md:w-[50%] sm:w-[40%] w-[5%]"
                       ></div>
-                      <div className="fixed right-0  bg-white md:w-[50%] sm:w-[60%] w-[95%] h-screen shadow-md px-1 sm:px-4 md:px-8 py-4 z-50">
+                      <div className="fixed right-0  bg-white md:w-[50%] sm:w-[60%] w-[85%] h-full items-center top-0  shadow-md rounded-l-2xl px-1 sm:px-4 md:px-8 py-4 z-50">
                         <p
                           onClick={() => setCross(true)}
-                          className=" absolute -left-5 border-[4px] text-white bg-secandari duration-100 p-2 w-fit rounded-full drop-shadow-sm"
+                          className=" absolute -left-5 border-[4px] text-white bg-secandari duration-100 p-2 w-fit rounded-full drop-shadow-sm cursor-pointer"
                         >
                           <RxCross2 className=" text-xl  animate-slide" />
                         </p>
-                        <div className="flex justify-center py-9">
-                          <h1 className="text-3xl font-bold text-orange-600">
+                        <div className="flex px-5 pt-16">
+                          <Link href='/' className="text-3xl font-bold text-orange-600 cursor-pointer">
                             TravelAgency
-                          </h1>
+                          </Link>
                         </div>
                         <div className="py-0 overflow-y-auto h-4/6 m-7 SideNavScroll text-primary">
-                          <ShopCart />
+                            <ShopCart />
+                            <PageCart />
+                            <BlogCart/>
+                          <Link
+                            href="/contact"
+                            className="hover:text-secandari text-xl font-medium font-Raleway"
+                          >
+                            Contact
+                          </Link>
                         </div>
                       </div>
                     </div>
