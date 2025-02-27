@@ -8,19 +8,20 @@ import Link from "next/link";
 import ShopCart from "./Navbar/CartNav/ShopCart";
 import BlogMenu from "./Navbar/HomeNav/BlogMenu";
 import PageMenu from "./Navbar/HomeNav/PageMenu";
-import ContacMenu from "./Navbar/HomeNav/ContacMenu";
 import ShopMenu from "./Navbar/HomeNav/ShopMenu";
 import { usePathname } from "next/navigation";
 import PageCart from "./Navbar/CartNav/PageCart";
 import BlogCart from "./Navbar/CartNav/BlogCart";
+import ShoppingCart from "./Navbar/ShoppingCart";
 
 const Navbar = () => {
   const [cross, setCross] = useState(true);
+  const [shop, setShop] = useState(true);
   const pathname = usePathname();
   const HandleClick = () => {
     setCross(false);
   };
-  // 3
+
   return (
     <nav className="bg-[#fff] text-[#212121] py-3 shadow fixed w-full z-30">
       <div className="container mx-auto font-Popins ">
@@ -30,7 +31,7 @@ const Navbar = () => {
             <div className="flex items-center">
               <Link
                 href="/"
-                className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl sm:text-2xl text-xl font-bold text-orange-600 cursor-pointer"
+                className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl sm:text-2xl text-xl font-bold text-secandari cursor-pointer"
               >
                 SkinCare
               </Link>
@@ -57,12 +58,22 @@ const Navbar = () => {
             <div className="">
               <ul className="flex gap-5 text-2xl">
                 <li>
-                  <LiaSearchSolid />
+                  <LiaSearchSolid className="hover:text-secandari" />
                 </li>
-                <li className="hover:text-secandari">
-                  <IoCartSharp />
-                </li>
-                <li className=" duration-500 lg:hidden">
+                {shop ? (
+                  <li
+                    onClick={() => setShop(false)}
+                    className="hover:text-secandari relative flex items-center"
+                  >
+                    <IoCartSharp />
+                    <span className="text-[8px] absolute -top-1 -right-2 flex items-center justify-center rounded-full bg-secandari text-white w-4 h-4">
+                      2
+                    </span>
+                  </li>
+                ) : (
+                  <ShoppingCart setShop={setShop} />
+                )}
+                <li className="duration-500 lg:hidden">
                   {cross ? (
                     <FiAlignRight
                       onClick={HandleClick}
@@ -82,14 +93,17 @@ const Navbar = () => {
                           <RxCross2 className=" text-xl  animate-slide" />
                         </p>
                         <div className="flex px-5 pt-16">
-                          <Link href='/' className="text-3xl font-bold text-orange-600 cursor-pointer">
+                          <Link
+                            href="/"
+                            className="text-3xl font-bold text-orange-600 cursor-pointer"
+                          >
                             TravelAgency
                           </Link>
                         </div>
                         <div className="py-0 overflow-y-auto h-4/6 m-7 SideNavScroll text-primary">
-                            <ShopCart />
-                            <PageCart />
-                            <BlogCart/>
+                          <ShopCart />
+                          <PageCart />
+                          <BlogCart />
                           <Link
                             href="/contact"
                             className="hover:text-secandari text-xl font-medium font-Raleway"
