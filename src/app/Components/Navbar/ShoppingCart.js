@@ -6,9 +6,9 @@ const ShoppingCart = ({ setShop }) => {
     <div className="absolute w-full top-0 left-0 bg-[rgba(0,0,0,0.17)] flex transition-all duration-500 h-screen">
       <div
         onClick={() => setShop(true)}
-        className="md:w-[65%] sm:w-[40%] w-[5%] cursor-pointer"
+        className="lg:w-[55%] xl:w-[65%] md:w-[35%] sm:w-[40%] w-[5%] cursor-pointer"
       ></div>
-      <div className="fixed right-0  bg-white md:w-[35%] sm:w-[60%] w-[85%] h-[98%] items-center top-1 bottom-2  shadow-md rounded-l-2xl px-1 sm:px-4 md:px-8 py-4 z-50">
+      <div className="fixed right-0  bg-white xl:w-[35%] lg:w-[45%] md:w-[65%] sm:w-[60%] w-[85%] h-[98%] items-center top-1 bottom-2  shadow-md rounded-l-2xl px-1 sm:px-4 md:px-8 py-4 z-50">
         <p
           onClick={() => setShop(true)}
           className=" absolute -left-5 border-[4px] text-white bg-secandari duration-100 p-2 w-fit rounded-full drop-shadow-sm cursor-pointer"
@@ -55,13 +55,13 @@ const ShoppingCart = ({ setShop }) => {
             <div className="mt-4 px-5 flex justify-between">
               <Link
                 href="/cart"
-                className=" px-8 py-2 rounded-md font-NunitoFont font-medium text-lg text-primary border border-primary hover:text-secandari hover:border-secandari duration-400"
+                className=" sm:px-8 px-4 py-2 rounded-md font-NunitoFont font-medium sm:text-lg text-base text-primary border border-primary hover:text-secandari hover:border-secandari duration-400"
               >
                 View Cart
               </Link>
               <Link
                 href="/checkout"
-                className="bg-primary text-white duration-300 hover:bg-secandari font-NunitoFont font-medium text-lg px-8 py-2 rounded-md"
+                className="bg-primary text-white duration-300 hover:bg-secandari font-NunitoFont font-medium sm:text-lg text-base sm:px-8 px-4 py-2 rounded-md"
               >
                 Checkout
               </Link>
