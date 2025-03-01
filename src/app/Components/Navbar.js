@@ -17,6 +17,7 @@ import ShoppingCart from "./Navbar/ShoppingCart";
 const Navbar = () => {
   const [cross, setCross] = useState(true);
   const [shop, setShop] = useState(true);
+  const [search, setSearch] = useState(false);
   const pathname = usePathname();
   const HandleClick = () => {
     setCross(false);
@@ -53,12 +54,24 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-
             {/* Mobile Menu Toggle */}
             <div className="">
               <ul className="flex gap-5 text-2xl">
                 <li>
-                  <LiaSearchSolid className="hover:text-secandari" />
+                  {search ? (
+                    <div className=" absolute top-0 left-0 py-3 z-40 w-full bg-white justify-between items-center m-auto">
+                      <input
+                        type="search"
+                        placeholder="Search Product"
+                        className="outline-none px-20 pt-4 text-base text-primary font-NunitoFont font-normal w-full"
+                      />
+                    </div>
+                  ) : (
+                    <LiaSearchSolid
+                      onClick={() => setSearch(true)}
+                      className="hover:text-secandari"
+                    />
+                  )}
                 </li>
                 {shop ? (
                   <li

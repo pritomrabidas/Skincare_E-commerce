@@ -55,12 +55,14 @@ const ShoppingCart = ({ setShop }) => {
             <div className="mt-4 px-5 flex justify-between">
               <Link
                 href="/cart"
+                onClick={() => setShop(true)}
                 className=" sm:px-8 px-4 py-2 rounded-md font-NunitoFont font-medium sm:text-lg text-base text-primary border border-primary hover:text-secandari hover:border-secandari duration-400"
               >
                 View Cart
               </Link>
               <Link
                 href="/checkout"
+                onClick={() => setShop(true)}
                 className="bg-primary text-white duration-300 hover:bg-secandari font-NunitoFont font-medium sm:text-lg text-base sm:px-8 px-4 py-2 rounded-md"
               >
                 Checkout

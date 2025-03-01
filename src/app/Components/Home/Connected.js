@@ -14,12 +14,12 @@ const Connected = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const portfolioItems = [
-    { id: 1, image: "/home-12.webp" },
-    { id: 2, image: "/home-13.webp" },
-    { id: 3, image: "/home-14.webp" },
-    { id: 4, image: "/home-15.webp" },
-    { id: 5, image: "/home-16.webp" },
-    { id: 6, image: "/home-17.webp" },
+    { id: 1, image: "/home-12.webp", title: "home" },
+    { id: 2, image: "/home-13.webp", title: "home" },
+    { id: 3, image: "/home-14.webp", title: "home" },
+    { id: 4, image: "/home-15.webp", title: "home" },
+    { id: 5, image: "/home-16.webp", title: "home" },
+    { id: 6, image: "/home-17.webp", title: "home" },
   ];
 
   const openModal = (index) => {
