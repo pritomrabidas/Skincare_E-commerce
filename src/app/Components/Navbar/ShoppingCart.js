@@ -54,7 +54,7 @@ const ShoppingCart = ({ setShop }) => {
             </div>
             <div className="mt-4 px-5 flex justify-between">
               <Link
-                href="/cart"
+                href="/viewcart"
                 onClick={() => setShop(true)}
                 className=" sm:px-8 px-4 py-2 rounded-md font-NunitoFont font-medium sm:text-lg text-base text-primary border border-primary hover:text-secandari hover:border-secandari duration-400"
               >
