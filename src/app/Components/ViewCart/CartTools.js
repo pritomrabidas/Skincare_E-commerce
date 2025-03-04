@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 
 const CartTools = () => {
@@ -12,26 +13,39 @@ const CartTools = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   return (
-    <div className="p-6 bg-gray-100 rounded-lg shadow-md">
-      <h2 className="text-xl font-semibold mb-4">Cart Totals</h2>
+    <div className="p-6 border-2 rounded-lg shadow-sm">
+      <h2 className="text-xl font-medium text-primary font-Popins mb-4">
+        Cart Totals
+      </h2>
       <table className="w-full text-left border-collapse">
         <tbody>
           <tr className="border-b">
-            <th className="p-2">Subtotal</th>
-            <td className="p-2 font-semibold">$1,896.16</td>
+            <th className="p-2 font-medium text-primary font-Popins text-base">
+              Subtotal
+            </th>
+            <td className="p-2 font-medium text-primary font-Monrope text-base">
+              $1,896.16
+            </td>
           </tr>
           <tr className="border-b">
-            <th className="p-2">Shipping</th>
+            <th className="p-2 font-medium text-primary font-Popins text-base">
+              Shipping
+            </th>
             <td className="p-2">
               <label className="flex items-center">
-                <input type="radio" checked readOnly className="mr-2" /> Free
-                Shipping
+                <input
+                  type="radio"
+                  checked
+                  readOnly
+                  className="mr-2 font-Popins font-normal text-base text-primary"
+                />{" "}
+                Free Shipping
               </label>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm font-normal font-NunitoFont text-gray-600">
                 Shipping options will be updated during checkout.
               </p>
               <button
-                className="mt-2 text-blue-600 hover:underline"
+                className="mt-2 text-sm font-normal font-NunitoFont text-secandari hover:underline"
                 onClick={() => setShippingVisible(!shippingVisible)}
               >
                 Calculate shipping
@@ -73,18 +87,22 @@ const CartTools = () => {
             </td>
           </tr>
           <tr>
-            <th className="p-2">Total</th>
-            <td className="p-2 font-bold text-lg">$1,896.16</td>
+            <th className="p-2 font-medium text-primary font-Popins text-base">
+              Total
+            </th>
+            <td className="p-2 font-medium text-primary font-Monrope text-base">
+              $1,896.16
+            </td>
           </tr>
         </tbody>
       </table>
       <div className="mt-4">
-        <a
+        <Link
           href="/checkout"
-          className="block w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700"
+          className="block w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700 text-sm font-medium font-NunitoFont"
         >
           Proceed to Checkout
-        </a>
+        </Link>
       </div>
     </div>
   );

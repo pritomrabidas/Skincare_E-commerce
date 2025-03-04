@@ -26,25 +26,35 @@ const Cart = () => {
      };
   return (
     <div className="container mx-auto p-4">
-      <form className="bg-white shadow-md rounded-lg p-6">
-        <table className="w-full border-collapse border border-gray-300">
-          <thead>
-            <tr className="bg-gray-100">
-              <th className="p-2">Remove</th>
-              <th className="p-2">Thumbnail</th>
-              <th className="p-2">Product</th>
-              <th className="p-2">Price</th>
-              <th className="p-2">Quantity</th>
-              <th className="p-2">Subtotal</th>
-            </tr>
-          </thead>
+      <form className="bg-white rounded-lg p-6">
+        <table className=" ">
+          <tr className="w-full ">
+            <th className="p-3 text-primary font-Popins text-sm font-medium">
+              Remove
+            </th>
+            <th className="p-3 text-primary font-Popins text-sm font-medium">
+              Thumbnail
+            </th>
+            <th className="p-3 text-primary font-Popins text-sm font-medium">
+              Product
+            </th>
+            <th className="p-3 text-primary font-Popins text-sm font-medium">
+              Price
+            </th>
+            <th className="p-3 text-primary font-Popins text-sm font-medium">
+              Quantity
+            </th>
+            <th className="p-3 text-primary font-Popins text-sm font-medium">
+              Subtotal
+            </th>
+          </tr>
           <tbody>
             {cartItems.map((item) => (
               <tr key={item.id} className="border-t border-gray-300">
                 <td className="p-2 text-center">
                   <button
                     onClick={() => handleRemove(item.id)}
-                    className="text-red-500"
+                    className="text-red-500 text-xl"
                   >
                     ×
                   </button>
@@ -58,9 +68,13 @@ const Cart = () => {
                     className="rounded"
                   />
                 </td>
-                <td className="p-2">{item.name}</td>
-                <td className="p-2">${item.price.toFixed(2)}</td>
-                <td className="p-2">
+                <td className="p-2 text-primary font-NunitoFont text-sm font-normal">
+                  {item.name}
+                </td>
+                <td className="p-2 text-primary font-Monrope text-sm font-normal">
+                  ${item.price.toFixed(2)}
+                </td>
+                <td className="p-2 text-primary font-Monrope text-sm font-normal">
                   <input
                     type="number"
                     className="border p-1 w-16"
@@ -71,7 +85,7 @@ const Cart = () => {
                     }
                   />
                 </td>
-                <td className="p-2">
+                <td className="p-2 text-primary font-Monrope text-sm font-normal">
                   ${(item.price * item.quantity).toFixed(2)}
                 </td>
               </tr>
@@ -84,15 +98,15 @@ const Cart = () => {
             <input
               type="text"
               placeholder="Coupon code"
-              className="border p-2 mr-2"
+              className="border focus:outline-secandari duration-200 p-2.5 mr-2  text-primary font-NunitoFont text-sm font-normal w-60 rounded"
             />
-            <button className="bg-gray-700 text-white px-4 py-2 rounded">
+            <button className="bg-gray-700 text-sm text-white px-6 py-2.5 rounded">
               Apply Coupon
             </button>
-          </div>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded">
+          <button className="bg-blue-600 text-white px-4 py-2.5 rounded text-sm font-medium font-NunitoFont ml-5">
             Update Cart
           </button>
+          </div>
         </div>
       </form>
     </div>

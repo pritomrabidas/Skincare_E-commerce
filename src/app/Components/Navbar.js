@@ -59,17 +59,19 @@ const Navbar = () => {
               <ul className="flex gap-5 text-2xl">
                 <li>
                   {search ? (
-                    <div className=" absolute top-0 left-0 py-3 z-40 w-full bg-white justify-between items-center m-auto">
+                    <div className=" absolute top-0 left-0 py-3 z-40 w-full bg-white px-20 justify-between flex items-center m-auto">
                       <input
-                        type="search"
+                        type="text"
                         placeholder="Search Product"
-                        className="outline-none px-20 pt-4 text-base text-primary font-NunitoFont font-normal w-full"
+                        autoComplete="off"
+                        className="outline-none  pt-4 text-base text-primary font-NunitoFont font-normal w-full"
                       />
+                      <RxCross2 onClick={()=>setSearch(false)} className="mt-4 text-2xl text-primary hover:text-secandari duration-200 cursor-pointer" />
                     </div>
                   ) : (
                     <LiaSearchSolid
                       onClick={() => setSearch(true)}
-                      className="hover:text-secandari"
+                      className="hover:text-secandari cursor-pointer"
                     />
                   )}
                 </li>
@@ -78,7 +80,7 @@ const Navbar = () => {
                     onClick={() => setShop(false)}
                     className="hover:text-secandari relative flex items-center"
                   >
-                    <IoCartSharp />
+                    <IoCartSharp className="cursor-pointer" />
                     <span className="text-[8px] absolute -top-1 -right-2 flex items-center justify-center rounded-full bg-secandari text-white w-4 h-4">
                       2
                     </span>
