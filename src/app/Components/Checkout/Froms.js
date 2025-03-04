@@ -13,7 +13,7 @@ const Froms = () => {
             </h4>
             <input
               type="text"
-              className="outline-none border-2 rounded-md px-5 py-3 text-sm text-primary font-Montserrat font-normal focus:border-secandari duration-200 w-64"
+              className="outline-none border-2 rounded-md px-5 py-3 text-sm text-primary font-Montserrat font-normal focus:border-secandari duration-200 w-full lg:w-52 xl:w-64"
             />
           </div>
           <div>
@@ -22,7 +22,7 @@ const Froms = () => {
             </h4>
             <input
               type="text"
-              className="outline-none border-2 rounded-md px-5 py-3 text-sm text-primary font-Montserrat font-normal focus:border-secandari duration-200 w-64"
+              className="outline-none border-2 rounded-md px-5 py-3 text-sm text-primary font-Montserrat font-normal focus:border-secandari duration-200 w-full lg:w-52 xl:w-64"
             />
           </div>
         </div>
