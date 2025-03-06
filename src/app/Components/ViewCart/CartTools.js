@@ -13,7 +13,7 @@ const CartTools = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   return (
-    <div className="p-6 border-2 rounded-lg shadow-sm">
+    <div className="p-6 border-2 rounded-lg shadow-sm w-80 sm:w-96 justify-center mx-auto">
       <h2 className="text-xl font-medium text-primary font-Popins mb-4">
         Cart Totals
       </h2>

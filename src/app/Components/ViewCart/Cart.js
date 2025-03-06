@@ -5,7 +5,7 @@ const Cart = () => {
      const [cartItems, setCartItems] = useState([
        {
          id: "956adf8f21dff76b502290b42a69ee07",
-         name: "Intense brightening exfoliating powder - 13",
+         name: "Intense...",
          price: 270.88,
          quantity: 7,
          image:
@@ -25,33 +25,33 @@ const Cart = () => {
        setCartItems(cartItems.filter((item) => item.id !== id));
      };
   return (
-    <div className="container mx-auto p-4">
-      <form className="bg-white rounded-lg p-6">
+    <div className=" mx-auto sm:p-4 p-1">
+      <form className="bg-white rounded-lg sm:p-6 p-1">
         <table className=" ">
           <tr className="w-full ">
-            <th className="p-3 text-primary font-Popins text-sm font-medium">
+            <th className="sm:p-3 p-2 text-primary font-Popins text-[10px] sm:text-sm font-medium">
               Remove
             </th>
-            <th className="p-3 text-primary font-Popins text-sm font-medium">
+            <th className="sm:p-3 p-2 text-primary font-Popins sm:text-sm text-[10px] font-medium">
               Thumbnail
             </th>
-            <th className="p-3 text-primary font-Popins text-sm font-medium">
+            <th className="sm:p-3 p-2 text-primary font-Popins text-[10px] sm:text-sm font-medium">
               Product
             </th>
-            <th className="p-3 text-primary font-Popins text-sm font-medium">
+            <th className="sm:p-3 p-2 text-primary font-Popins text-[10px] sm:text-sm font-medium">
               Price
             </th>
-            <th className="p-3 text-primary font-Popins text-sm font-medium">
+            <th className="sm:p-3 p-2 text-primary font-Popins text-[10px] sm:text-sm font-medium">
               Quantity
             </th>
-            <th className="p-3 text-primary font-Popins text-sm font-medium">
+            <th className="sm:p-3 p-2 text-primary font-Popins text-[10px] sm:text-sm font-medium">
               Subtotal
             </th>
           </tr>
           <tbody>
             {cartItems.map((item) => (
               <tr key={item.id} className="border-t border-gray-300">
-                <td className="p-2 text-center">
+                <td className="sm:p-2 p-1 text-center">
                   <button
                     onClick={() => handleRemove(item.id)}
                     className="text-red-500 text-xl"
@@ -59,7 +59,7 @@ const Cart = () => {
                     ×
                   </button>
                 </td>
-                <td className="p-2">
+                <td className="sm:p-2 p-1">
                   <Image
                     src={item.image}
                     alt={item.name}
@@ -68,16 +68,16 @@ const Cart = () => {
                     className="rounded"
                   />
                 </td>
-                <td className="p-2 text-primary font-NunitoFont text-sm font-normal">
+                <td className="sm:p-2 p-1 text-primary font-NunitoFont sm:text-sm text-[10px] font-normal ">
                   {item.name}
                 </td>
-                <td className="p-2 text-primary font-Monrope text-sm font-normal">
+                <td className="sm:p-2 p-1 text-primary font-Monrope sm:text-sm text-[10px] font-normal">
                   ${item.price.toFixed(2)}
                 </td>
-                <td className="p-2 text-primary font-Monrope text-sm font-normal">
+                <td className="sm:p-2 p-1 text-primary font-Monrope sm:text-sm text-[10px] font-normal">
                   <input
                     type="number"
-                    className="border p-1 w-16"
+                    className="border p-1 w-10 sm:w-16"
                     value={item.quantity}
                     min="0"
                     onChange={(e) =>
@@ -85,7 +85,7 @@ const Cart = () => {
                     }
                   />
                 </td>
-                <td className="p-2 text-primary font-Monrope text-sm font-normal">
+                <td className="sm:p-2 p-1 text-primary font-Monrope sm:text-sm text-[10px] font-normal">
                   ${(item.price * item.quantity).toFixed(2)}
                 </td>
               </tr>
@@ -94,18 +94,18 @@ const Cart = () => {
         </table>
 
         <div className="mt-4 flex justify-between items-center">
-          <div>
+          <div className="grid xl:grid-cols-3 grid-cols-2 gap-2 ">
             <input
               type="text"
               placeholder="Coupon code"
-              className="border focus:outline-secandari duration-200 p-2.5 mr-2  text-primary font-NunitoFont text-sm font-normal w-60 rounded"
+              className="border focus:outline-secandari duration-200 p-2.5 mr-2  text-primary font-NunitoFont text-sm font-normal xl:w-60 w-48 rounded mb-3"
             />
-            <button className="bg-gray-700 text-sm text-white px-6 py-2.5 rounded">
+            <button className="bg-gray-700 text-sm text-white px-6 py-2.5 rounded h-fit w-fit">
               Apply Coupon
             </button>
-          <button className="bg-blue-600 text-white px-4 py-2.5 rounded text-sm font-medium font-NunitoFont ml-5">
-            Update Cart
-          </button>
+            <button className="bg-blue-600 text-white px-4 py-2.5 rounded text-sm font-medium font-NunitoFont ml-0 xl:ml-5">
+              Update Cart
+            </button>
           </div>
         </div>
       </form>

@@ -53,10 +53,32 @@ const ViewRelativeProduct = () => {
     infinite: true,
     speed: 1000,
     slidesToShow: 4,
+    slidesToScroll: 1,
     adaptiveHeight: true,
-    prevArrow: <PrevArrow />, // ✅ No error now
+    prevArrow: <PrevArrow />, // ✅ Custom arrows
     nextArrow: <NextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024, // For tablets & small desktops
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768, // For mobile landscape
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480, // For mobile portrait
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
+
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
