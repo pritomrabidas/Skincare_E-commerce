@@ -13,22 +13,22 @@ const CartTools = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   return (
-    <div className="p-6 border-2 rounded-lg shadow-sm w-80 sm:w-96 justify-center mx-auto">
-      <h2 className="text-xl font-medium text-primary font-Popins mb-4">
+    <div className="p-6 border-2 rounded-lg shadow-sm w-80 sm:w-96 justify-center mx-auto mt-5 sm:mt-2">
+      <h2 className="sm:text-xl text-base font-medium text-primary font-Popins mb-4">
         Cart Totals
       </h2>
       <table className="w-full text-left border-collapse">
         <tbody>
           <tr className="border-b">
-            <th className="p-2 font-medium text-primary font-Popins text-base">
+            <th className="p-2 font-medium text-primary font-Popins sm:text-base text-sm ">
               Subtotal
             </th>
-            <td className="p-2 font-medium text-primary font-Monrope text-base">
+            <td className="p-2 font-medium text-primary font-Monrope sm:text-base text-sm">
               $1,896.16
             </td>
           </tr>
           <tr className="border-b">
-            <th className="p-2 font-medium text-primary font-Popins text-base">
+            <th className="p-2 font-medium text-primary font-Popins sm:text-base text-sm">
               Shipping
             </th>
             <td className="p-2">
@@ -37,15 +37,15 @@ const CartTools = () => {
                   type="radio"
                   checked
                   readOnly
-                  className="mr-2 font-Popins font-normal text-base text-primary"
+                  className="mr-2 font-Popins font-normal sm:text-base text-sm text-primary"
                 />{" "}
                 Free Shipping
               </label>
-              <p className="text-sm font-normal font-NunitoFont text-gray-600">
+              <p className="sm:text-sm text-xs font-normal font-NunitoFont text-gray-600">
                 Shipping options will be updated during checkout.
               </p>
               <button
-                className="mt-2 text-sm font-normal font-NunitoFont text-secandari hover:underline"
+                className="mt-2 sm:text-sm text-xs font-normal font-NunitoFont text-secandari hover:underline"
                 onClick={() => setShippingVisible(!shippingVisible)}
               >
                 Calculate shipping
@@ -87,7 +87,7 @@ const CartTools = () => {
             </td>
           </tr>
           <tr>
-            <th className="p-2 font-medium text-primary font-Popins text-base">
+            <th className="p-2 font-medium text-primary font-Popins tsm:text-base text-sm">
               Total
             </th>
             <td className="p-2 font-medium text-primary font-Monrope text-base">
@@ -99,7 +99,7 @@ const CartTools = () => {
       <div className="mt-4">
         <Link
           href="/checkout"
-          className="block w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700 text-sm font-medium font-NunitoFont"
+          className="block w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700 sm:text-sm text-xs font-medium font-NunitoFont"
         >
           Proceed to Checkout
         </Link>

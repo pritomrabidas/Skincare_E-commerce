@@ -57,16 +57,20 @@ const Navbar = () => {
             {/* Mobile Menu Toggle */}
             <div className="">
               <ul className="flex gap-5 text-2xl">
+                <Link href="/login" className="text-primary font-NunitoFont text-base font-medium cursor-pointer duration-200 hover:text-secandari hover:underline">Login / Register</Link>
                 <li>
                   {search ? (
-                    <div className=" absolute top-0 left-0 py-3 z-40 w-full bg-white px-20 justify-between flex items-center m-auto">
+                    <div className=" absolute top-0 left-0 py-3 z-40 w-full bg-white px-5 sm:px-10 md:px-14 lg:px-16 xl:px-20 justify-between flex items-center m-auto">
                       <input
                         type="text"
                         placeholder="Search Product"
                         autoComplete="off"
-                        className="outline-none  pt-4 text-base text-primary font-NunitoFont font-normal w-full"
+                        className="outline-none  pt-5 text-base text-primary font-NunitoFont font-normal w-full"
                       />
-                      <RxCross2 onClick={()=>setSearch(false)} className="mt-4 text-2xl text-primary hover:text-secandari duration-200 cursor-pointer" />
+                      <RxCross2
+                        onClick={() => setSearch(false)}
+                        className="mt-4 text-2xl text-primary hover:text-secandari duration-200 cursor-pointer"
+                      />
                     </div>
                   ) : (
                     <LiaSearchSolid

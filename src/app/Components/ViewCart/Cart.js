@@ -94,16 +94,16 @@ const Cart = () => {
         </table>
 
         <div className="mt-4 flex justify-between items-center">
-          <div className="grid xl:grid-cols-3 grid-cols-2 gap-2 ">
+          <div className="grid sm:grid-cols-3 grid-cols-2">
             <input
               type="text"
               placeholder="Coupon code"
-              className="border focus:outline-secandari duration-200 p-2.5 mr-2  text-primary font-NunitoFont text-sm font-normal xl:w-60 w-48 rounded mb-3"
+              className="border focus:outline-secandari duration-200 p-2.5 mr-2  text-primary font-NunitoFont text-xs sm:text-sm font-normal  rounded mb-3"
             />
-            <button className="bg-gray-700 text-sm text-white px-6 py-2.5 rounded h-fit w-fit">
+            <button className="bg-gray-700 text-xs sm:text-sm text-white px-6 py-2.5 rounded h-fit w-fit">
               Apply Coupon
             </button>
-            <button className="bg-blue-600 text-white px-4 py-2.5 rounded text-sm font-medium font-NunitoFont ml-0 xl:ml-5">
+            <button className="bg-blue-600 text-white px-4 py-2.5 rounded text-xs sm:text-sm font-medium font-NunitoFont h-fit w-fit">
               Update Cart
             </button>
           </div>

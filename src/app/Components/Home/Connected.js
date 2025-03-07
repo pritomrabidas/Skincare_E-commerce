@@ -57,7 +57,7 @@ const Connected = () => {
           {portfolioItems.map((item, index) => (
             <div
               key={item.id}
-              className="relative group overflow-hidden rounded-lg shadow"
+              className="relative group overflow-hidden rounded-lg shadow "
             >
               <Image
                 src={item.image}
@@ -73,9 +73,6 @@ const Connected = () => {
                 >
                   <FiPlus className="text-3xl font-normal" />
                 </button>
-                <h4 className="text-white text-lg font-semibold mt-2">
-                  {item.title}
-                </h4>
               </div>
             </div>
           ))}
@@ -102,7 +99,7 @@ const Connected = () => {
             alt={portfolioItems[currentIndex].title}
             width={100}
             height={100}
-            className="h-96 w-96 cursor-default rounded-md"
+            className="h-96 w-96 cursor-default rounded-md object-cover"
           />
           <button
             className="absolute right-4 text-white text-2xl font-Montez p-2 cursor-pointer"
