@@ -35,13 +35,13 @@ const Footer = () => {
                 About
               </Link>
               <Link
-                href="/news"
+                href="/blog"
                 className="hover:text-secandari duration-200  text-primary text-base font-normal font-Popins"
               >
                 News
               </Link>
               <Link
-                href="/partners"
+                href="/about2"
                 className="hover:text-secandari duration-200  text-primary text-base font-normal font-Popins"
               >
                 Partners
@@ -67,7 +67,7 @@ const Footer = () => {
                 Terms of Sale
               </Link>
               <Link
-                href="/about"
+                href="/contact"
                 className="hover:text-secandari duration-200  text-primary text-base font-normal font-Popins"
               >
                 Contacts

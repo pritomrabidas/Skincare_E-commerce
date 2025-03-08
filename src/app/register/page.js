@@ -12,9 +12,19 @@ const Page = () => {
         <div className="w-[500px] bg-[#f0efef37] shadow-md h-fit p-8 rounded-xl justify-center mx-auto ">
           <div className=" ">
             <p className="text-2xl text-primary font-medium font-NunitoFont">
-              Login
+              Register
             </p>
             <div className="pt-4">
+              <div className="">
+                <input
+                  type="text"
+                  className="outline-none px-3 py-2 rounded-md text-sm text-primary font-normal font-Opensans w-full"
+                  placeholder="Full Name"
+                />
+                <p className=" font-NunitoFont font-normal text-sm text-red-700 py-0.5">
+                  error
+                </p>
+              </div>
               <div>
                 <input
                   type="email"
@@ -45,13 +55,10 @@ const Page = () => {
               </div>
             </div>
             <p className="pt-2 font-medium font-NunitoFont text-base text-primary">
-              Back to the?
+              do not have an account?
               <span>
-                <Link
-                  href="/register"
-                  className="cursor-pointer hover:underline"
-                >
-                  Register
+                <Link href="/login" className="cursor-pointer hover:underline">
+                  LogIn
                 </Link>
               </span>
             </p>

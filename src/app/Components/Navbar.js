@@ -57,7 +57,12 @@ const Navbar = () => {
             {/* Mobile Menu Toggle */}
             <div className="">
               <ul className="flex gap-5 text-2xl">
-                <Link href="/login" className="text-primary font-NunitoFont text-base font-medium cursor-pointer duration-200 hover:text-secandari hover:underline">Login / Register</Link>
+                <Link
+                  href="/register"
+                  className="text-primary font-NunitoFont text-base font-medium cursor-pointer duration-200 hover:text-secandari hover:underline"
+                >
+                  Login / Register
+                </Link>
                 <li>
                   {search ? (
                     <div className=" absolute top-0 left-0 py-3 z-40 w-full bg-white px-5 sm:px-10 md:px-14 lg:px-16 xl:px-20 justify-between flex items-center m-auto">
