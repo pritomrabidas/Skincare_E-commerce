@@ -1,11 +1,19 @@
-"use client"
-import Benefit from "./Components/Home/Benefit";
-import Connected from "./Components/Home/Connected";
-import FeatureSection from "./Components/Home/FeatureSection";
-import HomeBanner from "./Components/Home/HomeBanner";
-import Introducing from "./Components/Home/Introducing";
-import Product from "./Components/Home/Product";
-import SpecialFormula from "./Components/Home/SpecialFormula";
+"use client";
+
+import dynamic from "next/dynamic";
+
+const dynamicImport = (path) =>
+  dynamic(() => import(`./Components/Home/${path}`), {
+    loading: () => <div>Loading...</div>,
+  });
+
+const HomeBanner = dynamicImport("HomeBanner");
+const Introducing = dynamicImport("Introducing");
+const Benefit = dynamicImport("Benefit");
+const SpecialFormula = dynamicImport("SpecialFormula");
+const FeatureSection = dynamicImport("FeatureSection");
+const Product = dynamicImport("Product");
+const Connected = dynamicImport("Connected");
 
 export default function Home() {
   return (
@@ -16,7 +24,7 @@ export default function Home() {
       <SpecialFormula />
       <FeatureSection />
       <Product />
-      <Connected/>
+      <Connected />
     </div>
   );
 }

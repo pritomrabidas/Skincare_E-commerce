@@ -1,17 +1,37 @@
-import AboutSection from "../Components/Pages/About1/AboutSection"
-import MissionSection from "../Components/Pages/About1/MissionSection"
-import OurStory from "../Components/Pages/About1/OurStory"
-import RevolutionSection from "../Components/Pages/RevolutionSection"
+"use client";
 
-const Page = () => {
-  return (
-    <div className="pt-20">
-      <AboutSection />
-      <OurStory />
-      <MissionSection />
-      <RevolutionSection/>
-    </div>
-  )
-}
+import dynamic from "next/dynamic";
 
-export default Page
+// Ensure correct paths
+const AboutSection = dynamic(
+  () => import("../Components/Pages/About1/AboutSection"),
+  {
+    loading: () => <div>Loading...</div>,
+  }
+);
+const OurStory = dynamic(() => import("../Components/Pages/About1/OurStory"), {
+  loading: () => <div>Loading...</div>,
+});
+const MissionSection = dynamic(
+  () => import("../Components/Pages/About1/MissionSection"),
+  {
+    loading: () => <div>Loading...</div>,
+  }
+);
+const RevolutionSection = dynamic(
+  () => import("../Components/Pages/RevolutionSection"),
+  {
+    loading: () => <div>Loading...</div>,
+  }
+);
+
+const ClientAbout = () => (
+  <div className="pt-20">
+    <AboutSection />
+    <OurStory />
+    <MissionSection />
+    <RevolutionSection />
+  </div>
+);
+
+export default ClientAbout;

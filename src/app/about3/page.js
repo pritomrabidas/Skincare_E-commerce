@@ -1,17 +1,38 @@
-import React from "react";
-import Breadcrumb from "../Components/Pages/Breadcrumb";
-import RevolutionSection from "../Components/Pages/RevolutionSection";
-import HeroSection from "../Components/Pages/About3/HeroSection";
-import FeatureSection from "../Components/Pages/About3/FeatureSection";
-import BestTeam from "../Components/Pages/About3/BestTeam";
+import dynamic from "next/dynamic";
+
+// Dynamically import components using Next.js dynamic
+const Breadcrumb = dynamic(() => import("../Components/Pages/Breadcrumb"), {
+  loading: () => <div>Loading...</div>,
+});
+const RevolutionSection = dynamic(
+  () => import("../Components/Pages/RevolutionSection"),
+  {
+    loading: () => <div>Loading...</div>,
+  }
+);
+const HeroSection = dynamic(
+  () => import("../Components/Pages/About3/HeroSection"),
+  {
+    loading: () => <div>Loading...</div>,
+  }
+);
+const FeatureSection = dynamic(
+  () => import("../Components/Pages/About3/FeatureSection"),
+  {
+    loading: () => <div>Loading...</div>,
+  }
+);
+const BestTeam = dynamic(() => import("../Components/Pages/About3/BestTeam"), {
+  loading: () => <div>Loading...</div>,
+});
 
 const Page = () => {
   return (
     <div className="pt-20">
-      <Breadcrumb heading="About 4" bread="About 4" />
+      <Breadcrumb heading="About 3" bread="About 3" />
       <HeroSection />
       <FeatureSection />
-      <BestTeam/>
+      <BestTeam />
       <RevolutionSection />
     </div>
   );

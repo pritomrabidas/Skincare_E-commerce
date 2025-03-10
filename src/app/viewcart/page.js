@@ -1,15 +1,30 @@
 "use client";
-import React from "react";
-import Breadcrumb from "../Components/Pages/Breadcrumb";
-import ProductCart from "../Components/ViewCart/ProductCart";
-import ViewRelativeProduct from "../Components/ViewCart/ViewRelativeProduct";
+import dynamic from "next/dynamic";
+
+// Dynamically import components using Next.js's dynamic import
+const Breadcrumb = dynamic(() => import("../Components/Pages/Breadcrumb"), {
+  ssr: false, // Disable SSR for this component if needed
+});
+const ProductCart = dynamic(
+  () => import("../Components/ViewCart/ProductCart"),
+  {
+    ssr: false,
+  }
+);
+const ViewRelativeProduct = dynamic(
+  () => import("../Components/ViewCart/ViewRelativeProduct"),
+  {
+    ssr: false,
+  }
+);
 
 const Page = () => {
   return (
     <div className="pt-20">
-      <Breadcrumb heading={"Cart"} bread={"cart"} />
+      {/* Directly render dynamically imported components */}
+      <Breadcrumb heading="Cart" bread="cart" />
       <ProductCart />
-      <ViewRelativeProduct/>
+      <ViewRelativeProduct />
     </div>
   );
 };

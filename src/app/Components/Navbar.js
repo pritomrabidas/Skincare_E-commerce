@@ -5,11 +5,11 @@ import { LiaSearchSolid } from "react-icons/lia";
 import { IoCartSharp } from "react-icons/io5";
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import ShopCart from "./Navbar/CartNav/ShopCart";
 import BlogMenu from "./Navbar/HomeNav/BlogMenu";
 import PageMenu from "./Navbar/HomeNav/PageMenu";
 import ShopMenu from "./Navbar/HomeNav/ShopMenu";
-import { usePathname } from "next/navigation";
 import PageCart from "./Navbar/CartNav/PageCart";
 import BlogCart from "./Navbar/CartNav/BlogCart";
 import ShoppingCart from "./Navbar/ShoppingCart";
@@ -70,7 +70,7 @@ const Navbar = () => {
                         type="text"
                         placeholder="Search Product"
                         autoComplete="off"
-                        className="outline-none  pt-5 text-base text-primary font-NunitoFont font-normal w-full"
+                        className="outline-none pt-5 text-base text-primary font-NunitoFont font-normal w-full"
                       />
                       <RxCross2
                         onClick={() => setSearch(false)}

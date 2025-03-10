@@ -1,18 +1,34 @@
-import React from "react";
-import HeroSection from "../Components/Pages/About2/HeroSection";
-import FeaturesSection from "../Components/Pages/About2/FeaturesSection";
-import Team from "../Components/Pages/About2/Team";
-import RevolutionSection from "../Components/Pages/RevolutionSection";
+import dynamic from "next/dynamic";
 
-const Page = () => {
-  return (
-    <div className="pt-20">
-          <HeroSection />
-          <FeaturesSection />
-          <Team />
-          <RevolutionSection/>
-    </div>
-  );
-};
+const HeroSection = dynamic(
+  () => import("../Components/Pages/About2/HeroSection"),
+  {
+    loading: () => <div>Loading...</div>,
+  }
+);
+const FeaturesSection = dynamic(
+  () => import("../Components/Pages/About2/FeaturesSection"),
+  {
+    loading: () => <div>Loading...</div>,
+  }
+);
+const Team = dynamic(() => import("../Components/Pages/About2/Team"), {
+  loading: () => <div>Loading...</div>,
+});
+const RevolutionSection = dynamic(
+  () => import("../Components/Pages/RevolutionSection"),
+  {
+    loading: () => <div>Loading...</div>,
+  }
+);
+
+const Page = () => (
+  <div className="pt-20">
+    <HeroSection />
+    <FeaturesSection />
+    <Team />
+    <RevolutionSection />
+  </div>
+);
 
 export default Page;

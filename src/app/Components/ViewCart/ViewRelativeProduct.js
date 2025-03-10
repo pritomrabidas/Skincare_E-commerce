@@ -80,32 +80,24 @@ const ViewRelativeProduct = () => {
   };
 
   return (
-    <section className="py-20">
+    <section className="py-20 ">
       <div className="container mx-auto px-4">
         <div className="w-full justify-center items-center flex">
-          <Slider
-            {...settings}
-            className="text-center flex w-[95%]  rounded-lg shadow-sm"
-          >
+          <Slider {...settings} className="w-[95%]">
             {ingredients.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white p-5 flex rounded-lg items-center m-auto "
-              >
-                <div>
+              <div key={index} className="p-4">
+                <div className="bg-white rounded-md shadow-md flex flex-col items-center  pb-3">
                   <Image
                     src={item.img}
                     alt={item.title}
                     width={170}
                     height={170}
-                    className="mx-auto w-60 h-48 rounded object-cover"
+                    className="w-full h-48 object-cover rounded-lg"
                   />
-                </div>
-                <div>
-                  <h4 className="text-lg text-primary font-Popins font-medium mt-2">
+                  <h4 className="text-lg text-primary font-semibold">
                     {item.title}
                   </h4>
-                  <p className="text-base text-brand font-NunitoFont font-normal w-[70%] text-center m-auto ">
+                  <p className="text-base text-gray-600 font-medium">
                     {item.price}
                   </p>
                 </div>

@@ -70,7 +70,7 @@ const Team = () => {
                 height={100}
                 src={member.img}
                 alt="team"
-                className=" 2xl:h-[370px] xl:h-[300px] lg:h-[360px] md:h-[300px] sm:h-[250px] h-[270px] sm:w-full w-[350px] rounded relative"
+                className=" 2xl:h-[370px] xl:h-[300px] lg:h-[360px] md:h-[300px] sm:h-[250px] h-[270px] sm:w-full w-[350px] rounded relative object-cover"
               />
               <div className="absolute bg-[rgba(0,0,0,0.60)] w-1/3 top-0 right-3 bottom-[20%] rounded-r flex transform scale-0 group-hover:scale-75 transition-transform duration-700 ease-in-out delay-100">
                 <ul className="items-center m-auto justify-center text-center text-sm font-extralight text-[#384141] rounded-full">

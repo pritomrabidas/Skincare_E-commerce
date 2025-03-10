@@ -1,15 +1,22 @@
-import ContactSection1 from "../Components/Contact/Contact-1/ContactSection1";
-import HelpSection from "../Components/Contact/Contact-1/HelpSection";
-import Showroom from "../Components/Contact/Contact-1/Showroom";
+"use client";
 
-const Page = () => {
-  return (
-    <div className="pt-20">
-      <HelpSection />
-      <ContactSection1 />
-      <Showroom />
-    </div>
-  );
-};
+import dynamic from "next/dynamic";
+
+const dynamicImport = (path) =>
+  dynamic(() => import(`../Components/Contact/Contact-1/${path}`), {
+    loading: () => <div>Loading...</div>,
+  });
+
+const ContactSection1 = dynamicImport("ContactSection1");
+const HelpSection = dynamicImport("HelpSection");
+const Showroom = dynamicImport("Showroom");
+
+const Page = () => (
+  <div className="pt-20">
+    <HelpSection />
+    <ContactSection1 />
+    <Showroom />
+  </div>
+);
 
 export default Page;
